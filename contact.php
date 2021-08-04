@@ -1,8 +1,9 @@
 <?php
+require_once 'services/TemplateEngine.php';
 
-$layout = file_get_contents('./views/layouts/main.html');
-$content = file_get_contents('./views/contact/content.html');
+$templateEngine = new TemplateEngine();
 
-$html = str_replace('%content%', $content, $layout);
-
-echo $html;
+echo $templateEngine->render(
+    './views/layouts/main.html',
+    './views/contact/content.html'
+);
