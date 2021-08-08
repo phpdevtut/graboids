@@ -1,10 +1,11 @@
 <?php
+/*import blade*/
 require 'vendor/autoload.php';
-
+/*use blade*/
 use Jenssegers\Blade\Blade;
-
+/*make new blade object, set path to views, set cache path to cache*/
 $blade = new Blade('views', 'cache');
-
+/*array of graboid photos*/
 $graboids = [
     [
         'id' => 1,
@@ -43,6 +44,11 @@ $graboids = [
         'src' => '/assets/images/grab9.jpg',
     ],
 ];
+/*show content from file views/home/content, pass in array of graboids
+changes scope of graboids so content can take it.
+does home.content mean the home/content.blade.php file? Or does it mean the section('content')?
+does 'graboids' mean the prior array above ^? So we are taking the variable above '$graboids' and
+putting it into another '$graboids'? So is it, $graboids = $graboids = base array or $graboids = base array?*/
 
 echo $blade->render('home.content', [
     'graboids' => $graboids,

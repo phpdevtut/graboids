@@ -1,3 +1,5 @@
+{{--//searches view/layouts/main.blade.php for blade queries--}}
+{{--//Does this basically open layouts.main so it also gets echoed?--}}
 @extends('layouts.main')
 
 @section('content')
