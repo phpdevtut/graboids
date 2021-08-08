@@ -3,6 +3,9 @@
 require 'vendor/autoload.php';
 /*use blade*/
 use Jenssegers\Blade\Blade;
+
+//header('Content-Type: application/json');
+
 /*make new blade object, set path to views, set cache path to cache*/
 $blade = new Blade('views', 'cache');
 /*array of graboid photos*/
@@ -50,6 +53,10 @@ does home.content mean the home/content.blade.php file? Or does it mean the sect
 does 'graboids' mean the prior array above ^? So we are taking the variable above '$graboids' and
 putting it into another '$graboids'? So is it, $graboids = $graboids = base array or $graboids = base array?*/
 
-echo $blade->render('home.content', [
+//echo json_encode($graboids);
+
+$html = $blade->render('home.content', [
     'graboids' => $graboids,
 ]);
+
+echo $html;

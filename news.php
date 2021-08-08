@@ -1,12 +1,17 @@
 <?php
 /*require_once 'services/TemplateEngine.php';
 
-$templateEngine = new TemplateEngine();
+/**
+ * That's how we did it our way back then
+ */
 
-echo $templateEngine->render(
-    './views/layouts/main.blade.php',
-    './views/news/content.blade.php'
-);*/
+//$templateEngine = new TemplateEngine();
+//
+//echo $templateEngine->render(
+//    './views/layouts/main.blade.php',
+//    './views/news/content.blade.php'
+//);
+
 require 'vendor/autoload.php';
 
 use Jenssegers\Blade\Blade;
