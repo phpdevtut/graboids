@@ -3,6 +3,8 @@ require 'vendor/autoload.php';
 
 use Jenssegers\Blade\Blade;
 
+//header('Content-Type: application/json');
+
 $blade = new Blade('views', 'cache');
 
 $graboids = [
@@ -44,6 +46,10 @@ $graboids = [
     ],
 ];
 
-echo $blade->render('home.content', [
+//echo json_encode($graboids);
+
+$html = $blade->render('home.content', [
     'graboids' => $graboids,
 ]);
+
+echo $html;

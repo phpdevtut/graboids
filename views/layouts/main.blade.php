@@ -14,12 +14,14 @@
                         <li><a href="/upload.php">Upload</a></li>
                         <li><a href="/about.php">About</a></li>
                         <li><a href="/contact.php">Contact</a></li>
-
                     </ul>
                 </div>
             </div>
             <div class="alert"><p style="color:red">Graboid alert!!!</p></div>
             <div id="content">
+                <!--
+                 Here we had %content% as a pointer on where we want to embed a view
+                 -->
                 @yield('content')
             </div>
         </div>
