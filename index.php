@@ -4,21 +4,11 @@ require 'vendor/autoload.php';
 /*use blade*/
 use Jenssegers\Blade\Blade;
 
-//header('Content-Type: application/json');
-
 /*make new blade object, set path to views, set cache path to cache*/
 $blade = new Blade('views', 'cache');
-/*array of graboid photos*/
-
-
-
-function saveGraboid($graboid) {
-    $pdo = new PDO('sqlite:graboids-database.sqlite');
-    $pdo->query('INSERT INTO graboids (src) VALUES ("' . $graboid['src'] . '");');
-}
 
 function getGraboids() {
-    $pdo = new PDO('sqlite:graboids-database.sqlite');
+    $pdo = new PDO('mysql:host=localhost;dbname=homestead', 'homestead', 'secret');
 
     return $pdo->query('SELECT * FROM graboids;')->fetchAll();
 }

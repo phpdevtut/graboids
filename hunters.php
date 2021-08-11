@@ -38,7 +38,7 @@ foreach ($hunters as $hunter) {
 }*/
 
 function getHunters() {
-    $pdo = new PDO('sqlite:graboids-database.sqlite');
+    $pdo = new PDO('mysql:host=localhost;dbname=homestead', 'homestead', 'secret');
     return $pdo->query('SELECT * FROM hunters;')->fetchAll();
 }
 
