@@ -59,10 +59,10 @@ function getGraboids() {
     return $pdo->query('SELECT * FROM graboids;')->fetchAll();
 }
 
-//foreach ($graboids as $graboid) {
-//    saveGraboid($graboid);
-//}
-
+/*foreach ($graboids as $graboid) {
+    saveGraboid($graboid);
+}*/
+/*is this an array?*/
 $graboids = getGraboids();
 
 /*show content from file views/home/content, pass in array of graboids

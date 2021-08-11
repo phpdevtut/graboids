@@ -5,7 +5,7 @@ require 'vendor/autoload.php';
 use Jenssegers\Blade\Blade;
 
 $blade = new Blade('views', 'cache');
-$hunters = [
+/*$hunters = [
     [
         'id' => 1,
         'src' => '/assets/images/hunters/hunter1.jpg',
@@ -27,6 +27,25 @@ $hunters = [
         'src' => '/assets/images/hunters/hunter5.jpg',
     ],
 ];
-echo $blade->render('hunters.content', [
+
+function saveHunter($hunters) {
+    $pdo = new PDO('sqlite:graboids-database.sqlite');
+    $pdo->query('INSERT INTO hunters (src) VALUES ("' . $hunters['src'] . '");');
+}
+
+foreach ($hunters as $hunter) {
+    saveHunter($hunter);
+}*/
+
+function getHunters() {
+    $pdo = new PDO('sqlite:graboids-database.sqlite');
+    return $pdo->query('SELECT * FROM hunters;')->fetchAll();
+}
+
+$hunters = getHunters();
+
+$html = $blade->render('hunters.content', [
     'hunters' => $hunters,
 ]);
+
+echo $html;
