@@ -29,6 +29,7 @@
 
 .image {
     float: left;
+    width: 250px;
 }
 
 #content {
