@@ -56,6 +56,7 @@ function saveGraboid($graboid) {
 
 function getGraboids() {
     $pdo = new PDO('sqlite:graboids-database.sqlite');
+
     return $pdo->query('SELECT * FROM graboids;')->fetchAll();
 }
 
