@@ -12,11 +12,15 @@
                 @endforeach
             </div>
         @endforeach--}}
- <div class="myGallery">
-        @foreach ($graboids as $graboid)
+    <div class="myGallery">
+        @foreach (array_chunk($graboids, 4) as $graboidsChunk)
+            <div class="row">
+                @foreach ($graboidsChunk as $graboid)
                     <img src="{{ $graboid['src'] }}" />
+                @endforeach
+            </div>
         @endforeach
- </div>
+    </div>
     <div class="clear"></div>
 @endsection
 
