@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
 @section('content')
+    <div class="myGallery">
     @foreach ($hunters as $hunter)
-        <div class="image">
             <img src="{{ $hunter['src'] }}"/>
-        </div>
     @endforeach
+    </div>
     <div class="clear"></div>
 @endsection

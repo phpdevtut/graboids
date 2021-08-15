@@ -2,7 +2,10 @@
     width: 1280px;
     margin: 0 auto;
 }
-
+body {
+    background: url("/assets/images/background.jpg");
+    background-repeat: repeat;
+}
 #header {
     height: 250px;
     position: relative;
@@ -24,7 +27,35 @@
     display: block;
     float: left;
     padding: 30px;
-    margin: 20px
+    margin: 20px;
+}
+
+a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.about {
+    color: pink;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+
+.news {
+    color: pink;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
 }
 
 .image {
@@ -40,4 +71,14 @@
 
 .clear {
     clear: both;
+}
+
+.myGallery {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.myGallery img {
+    width: 100%;
 }

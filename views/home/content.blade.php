@@ -3,10 +3,20 @@
 @extends('layouts.main')
 
 @section('content')
-    @foreach ($graboids as $graboid)
-            <div class="image">
-                <img src="{{ $graboid['src'] }}" />
+ {{--       @foreach (array_chunk($graboids->all(), 4) as $graboidsRow)
+            <div class="row">
+                @foreach ($graboidsRow as $graboid)
+                    <div class="image">
+                        <img src="{{ $graboid['src'] }}" />
+                    </div>
+                @endforeach
             </div>
-    @endforeach
+        @endforeach--}}
+ <div class="myGallery">
+        @foreach ($graboids as $graboid)
+                    <img src="{{ $graboid['src'] }}" />
+        @endforeach
+ </div>
     <div class="clear"></div>
 @endsection
+

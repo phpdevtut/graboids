@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+    <div class="about">
     <p>Burt Gummer Appreciation Society</p>
     <p>"Doomsday Prepper"? We think not. Burt Gummer is a <br>
         virile man, with a bold mustache and attire that says, <br>
@@ -11,5 +12,6 @@
         the first to destroy a Graboid, the first to show other men the <br>
         rules of the road. It's for this reason we follow him. <br>
         It's for this reason we praise him.</p>
+    </div>
     <div class="clear"></div>
 @endsection
