@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use Graboids\Services;
+
 class TemplateEngine
 {
     public function render(string $layoutPath, string $contentPath): string

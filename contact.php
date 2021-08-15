@@ -1,5 +1,5 @@
 <?php
-/*require_once 'services/TemplateEngine.php';
+/*require_once 'src/TemplateEngine.php';
 
 $templateEngine = new TemplateEngine();
 
