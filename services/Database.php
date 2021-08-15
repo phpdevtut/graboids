@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+namespace Graboids;
+
+use PDO;
+
 class Database
 {
     /**
@@ -9,12 +13,11 @@ class Database
      */
     private $connection;
 
-    public function __construct(
-        string $host,
-        string $dbname,
-        string $username,
-        string $password
-    ) {
+    public function __construct() {
+        $dbname = $_ENV['DB_NAME'];
+        $username = $_ENV['DB_USER'];
+        $password = $_ENV['DB_PASS'];
+
         $this->connection = new PDO('mysql:host=localhost;dbname=' . $dbname, $username, $password);
     }
 

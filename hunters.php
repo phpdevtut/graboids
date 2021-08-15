@@ -3,9 +3,12 @@
 require 'vendor/autoload.php';
 
 use Jenssegers\Blade\Blade;
+use Graboids\Database;
 
-require_once 'includes/database.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
+$db = new Database();
 $hunters = $db->query('SELECT * FROM hunters;')->fetchAll();
 $blade = new Blade('views', 'cache');
 

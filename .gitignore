@@ -3,3 +3,4 @@ vendor
 cache
 graboids-database.sqlite
 phinx.php
+.env
