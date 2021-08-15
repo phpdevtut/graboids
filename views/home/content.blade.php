@@ -13,10 +13,10 @@
             </div>
         @endforeach--}}
     <div class="myGallery">
-        @foreach (array_chunk($graboids, 4) as $graboidsChunk)
-            <div class="row">
+        @foreach (array_chunk($graboids, 5) as $graboidsChunk)
+            <div class="imgWrapper">
                 @foreach ($graboidsChunk as $graboid)
-                    <img src="{{ $graboid['src'] }}" />
+                    <img class="img-thumbnail rounded float-start" src="{{ $graboid['src'] }}" />
                 @endforeach
             </div>
         @endforeach
