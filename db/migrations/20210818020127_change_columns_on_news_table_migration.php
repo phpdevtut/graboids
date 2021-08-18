@@ -21,7 +21,7 @@ final class ChangeColumnsOnNewsTableMigration extends AbstractMigration
     public function down()
     {
         $news = $this->table('news');
-        $news->removeColumn('title', 'text', ['null' => false])->save();
-        $news->removeColumn('content', 'text', ['null' => false])->save();
+        $news->removeColumn('title')->save();
+        $news->removeColumn('content')->save();
     }
 }

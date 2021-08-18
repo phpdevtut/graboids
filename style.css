@@ -16,6 +16,12 @@ body {
     top: 0;
 }
 
+#auth {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 #menu {
     position: absolute;
     right: 0;

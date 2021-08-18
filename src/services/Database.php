@@ -25,4 +25,9 @@ class Database
     {
         return $this->connection->query($query);
     }
+
+    public function prepare(string $sql)
+    {
+        return $this->connection->prepare($sql);
+    }
 }

@@ -20,6 +20,9 @@
                         <li><a href="/contact.php">Contact</a></li>
                     </ul>
                 </div>
+                <div id="auth">
+                    <a class="btn btn-primary" href="/admin/login.php">Login</a>
+                </div>
             </div>
             <div class="alert"><p style="color:red">Graboid alert!!!</p></div>
             <div id="content">
