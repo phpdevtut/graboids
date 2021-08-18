@@ -21,6 +21,12 @@ if (empty($_POST)) {
     $user = User::findByUsernameAndPassword($_POST['username'], $_POST['password']);
 
     if ($user) {
+        // have to start a session for the user found
+        session_start();
+
+        $_SESSION['is_admin'] = $user->admin;
+        $_SESSION['user_id'] = $user->id;
+
         header('Location: /admin/addArticle.php');
     } else {
         $message = 'User not found!';

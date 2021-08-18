@@ -9,6 +9,11 @@ use PDO;
 
 class User
 {
+    public static function findById (int $id)
+    {
+        $db = new Database();
+    }
+
     public static function findByUsernameAndPassword(string $username, string $password)
     {
         $db = new Database();
