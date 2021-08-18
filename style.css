@@ -2,8 +2,8 @@
     margin: 0 auto;
 }
 body {
-    /*background: url("/assets/images/background.jpg");
-    background-repeat: repeat;*/
+    background: url("/assets/images/background.jpg");
+    background-repeat: repeat;
 }
 #header {
     height: 250px;
@@ -41,6 +41,18 @@ a:visited {
     text-decoration: none;
 }
 
+p {
+    color: pink;
+}
+
+h2 {
+    color: pink;
+}
+
+h4 {
+    color: pink;
+}
+
 .about {
     color: pink;
     margin: auto;
@@ -49,13 +61,13 @@ a:visited {
     text-align: center;
 }
 
-.news {
+/*.news {
     color: pink;
     margin: auto;
     width: 60%;
     padding: 10px;
     text-align: center;
-}
+}*/
 
 .image {
     float: left;
@@ -88,4 +100,77 @@ a:visited {
 
 .imgWrapper {
     margin: 0px auto;
+}
+
+.form-label {
+    color: pink;
+}
+
+.btn-primary {
+    background-color: magenta;
+    color: black;
+    border-color: magenta;
+}
+
+.btn-primary:hover {
+    background-color: purple;
+    color: white;
+    border-color: purple;
+}
+
+/*.upload_div {
+    display: block;
+    text-align: center;
+}
+
+.upload_form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}*/
+
+.contact_div {
+    width: 500px;
+}
+
+.message_form {
+    width: 500px;
+    height: 300px;
+}
+
+/*.news_div {
+    display: block;
+    text-align: center;
+}
+
+.news_form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contact_div {
+    display: block;
+    text-align: center;
+}
+
+.contact_form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}*/
+
+.outer_form_div {
+    display: block;
+    text-align: center;
+}
+
+.inner_form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }

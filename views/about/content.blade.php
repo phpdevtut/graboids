@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="about">
-    <p>Burt Gummer Appreciation Society</p>
+    <h2>Burt Gummer Appreciation Society</h2>
     <p>"Doomsday Prepper"? We think not. Burt Gummer is a <br>
         virile man, with a bold mustache and attire that says, <br>
         "Yeah, I've been there. Yeah, I've done that.", and <br>

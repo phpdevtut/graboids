@@ -1,13 +1,23 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="news">
-        <h1>Add new article</h1>
+<div class="outer_form_div">
+    <h2>Add new article</h2>
+    <div class="inner_form">
         <form action="saveNewArticle.php" method="POST">
-            <input name="title">
-            <textarea name="news"></textarea>
-            <button class="btn btn-primary">Submit</button>
+            <p>Title:</p>
+                <div name="title" class="col-auto mb-3">
+                    <input class="form-control" name="title">
+                </div>
+            <p>Content:</p>
+                <div class="col-auto mb-3">
+                    <textarea  class="message_form" name="content"></textarea>
+                </div>
+            <div class="col-auto mb-3">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
         </form>
     </div>
-    <div class="clear"></div>
+</div>
+<div class="clear"></div>
 @endsection
