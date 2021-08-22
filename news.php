@@ -14,8 +14,18 @@
 
 require 'vendor/autoload.php';
 
+use Graboids\Models\News;
 use Jenssegers\Blade\Blade;
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$news = News::all();
 
 $blade = new Blade('views', 'cache');
 
-echo $blade->render('news.content');
+$html = $blade->render('news.content', [
+    'news' => $news,
+]);
+
+echo $html;

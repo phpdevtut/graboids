@@ -51,11 +51,7 @@ p {
     color: pink;
 }
 
-h2 {
-    color: pink;
-}
-
-h4 {
+h2, h4, h5 {
     color: pink;
 }
 
@@ -179,4 +175,16 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+.card {
+    background-color: transparent;
+}
+
+.adminPanelList {
+    width: 250px;
+}
+
+.list-group-item a {
+    background-color: pink;
 }

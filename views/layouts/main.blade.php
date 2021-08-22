@@ -9,7 +9,7 @@
     <body>
         <div id="wrapper" class="container">
             <div id="header">
-                <img id="logo" src="/assets/images/logo.png"/>
+                <img id="logo" src="/assets/images/Tremors_Logo_Sm.png"/>
                 <div id="menu">
                     <ul>
                         <li><a href="/">Home</a></li>

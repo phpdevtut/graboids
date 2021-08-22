@@ -18,6 +18,9 @@
                 <div class="col-auto mb-3">
                     <button class="btn btn-primary" type="submit">Login</button>
                 </div>
+                <div>
+                    <a href="/./register.php">Register a New Account</a>
+                </div>
             </form>
         </div>
     </div>
