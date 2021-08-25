@@ -15,7 +15,7 @@ $dotenv->load();
 if (empty($_COOKIE)) {
     header('Location: /admin/login.php');
 }
-
+//gives cookie if you don't have one, or logs in
 session_start();
 
 if (!$_SESSION['is_admin']) {
