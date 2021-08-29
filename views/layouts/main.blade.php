@@ -23,7 +23,7 @@
                 <div id="auth">
                     @if (isset($_SESSION['user_id']))
                         <div class="col-auto mb-3">
-                            <button class="btn btn-primary" type="submit"><a href="/views/logout/content.blade.php">Logout</a></button>
+                            <button class="btn btn-primary" type="submit"><a href="/logout">Logout</a></button>
                         </div>
                     @else
                         <div class="col-auto mb-3">

@@ -26,5 +26,7 @@ $router->get('/upload', '\Graboids\Controllers\UploadController@index');
 $router->get('/about', '\Graboids\Controllers\AboutController@index');
 $router->get('/contact', '\Graboids\Controllers\ContactController@index');
 
+$router->get('logout', '\Graboids\Controllers\LogoutController@logout');
+
 // Run it!
 $router->run();
