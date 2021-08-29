@@ -22,6 +22,6 @@ class Hunter extends Model
         $desc = $params['desc'];
 
         $db = new Database();
-        return $db->query("INSERT INTO hunters (src, name, desc) VALUES ('{$src}', '{$name}', '{$desc}')");
+        return $db->query("INSERT INTO hunters (src, name, `desc`) VALUES ('{$src}', '{$name}', '{$desc}')");
     }
 }
