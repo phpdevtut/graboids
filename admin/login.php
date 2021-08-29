@@ -27,7 +27,7 @@ if (empty($_POST)) {
         $_SESSION['is_admin'] = $user->admin;
         $_SESSION['user_id'] = $user->id;
 
-        header('Location: /admin/addArticle.php');
+        header('Location: /admin/add-article');
     } else {
         $message = 'User not found!';
     }

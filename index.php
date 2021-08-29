@@ -28,5 +28,10 @@ $router->get('/contact', '\Graboids\Controllers\ContactController@index');
 
 $router->get('logout', '\Graboids\Controllers\LogoutController@logout');
 
+// Admin
+$router->get('admin/add-article', '\Graboids\Controllers\Admin\ArticlesController@add');
+
+
+
 // Run it!
 $router->run();
