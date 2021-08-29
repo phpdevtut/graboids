@@ -32,4 +32,11 @@ class HuntersController
 
         echo $html;
     }
+
+    public function delete(int $hunterId)
+    {
+        Hunter::deleteById($hunterId);
+
+        header('Location: /hunters');
+    }
 }

@@ -18,9 +18,7 @@ $router = new \Bramus\Router\Router();
 // Define routes
 $router->get('/', '\Graboids\Controllers\HomeController@index');
 $router->get('/(\d+)', '\Graboids\Controllers\HomeController@show');
-$router->get('/hunters', '\Graboids\Controllers\HuntersController@index');
 //is it taking the digit from content and passing it to show function? or where is the digit coming from?
-$router->get('/hunters/(\d+)', '\Graboids\Controllers\HuntersController@show');
 $router->get('/news', '\Graboids\Controllers\NewsController@index');
 $router->get('/upload', '\Graboids\Controllers\UploadController@index');
 $router->get('/about', '\Graboids\Controllers\AboutController@index');
@@ -31,7 +29,10 @@ $router->get('logout', '\Graboids\Controllers\LogoutController@logout');
 // Admin
 $router->get('admin/add-article', '\Graboids\Controllers\Admin\ArticlesController@add');
 
-
+// Hunters
+$router->get('/hunters', '\Graboids\Controllers\HuntersController@index');
+$router->get('/hunters/(\d+)', '\Graboids\Controllers\HuntersController@show');
+$router->get('/hunters/(\d+)/delete', '\Graboids\Controllers\HuntersController@delete');
 
 // Run it!
 $router->run();

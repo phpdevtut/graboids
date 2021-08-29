@@ -25,4 +25,20 @@ abstract class Model
             throw new \Exception('Query was not successful!');
         }
     }
+
+    public static function deleteById(int $id) {
+        $db = new Database();
+
+        $statement = $db->prepare("DELETE FROM `" . static::TABLE . "` WHERE id = :id;");
+        $statement->bindValue(':id', $id);
+
+        $queryWasSuccessful = $statement->execute();
+
+        if ($queryWasSuccessful) {
+            //returns it back to controller?
+            return $statement->rowCount();
+        } else {
+            throw new \Exception('Query was not successful!');
+        }
+    }
 }
