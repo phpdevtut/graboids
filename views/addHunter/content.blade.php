@@ -11,11 +11,11 @@
                 </div>
                 <div class="col-auto mb-3">
                     <p>Hunter Name</p>
-                    <input class="form-control" name="hunter_name">
+                    <input class="form-control" name="name">
                 </div>
                 <div class="col-auto mb-3">
                     <p>Hunter Description</p>
-                    <textarea  class="message_form" name="hunter_desc"></textarea>
+                    <textarea  class="message_form" name="desc"></textarea>
                 </div>
                 <div class="col-auto mb-3">
                     <button class="btn btn-primary" type="submit">Submit</button>

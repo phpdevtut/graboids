@@ -1,13 +1,13 @@
 <?php
 /*import blade*/
 
-use Graboids\Models\emailToDatabase;
+use Graboids\Models\Contact;
 
 require '../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
-emailToDatabase::create($_POST);
+contact::create($_POST);
 
-header('Location: /index.php');
+header('Location: /');

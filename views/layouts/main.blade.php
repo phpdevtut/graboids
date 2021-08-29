@@ -13,15 +13,27 @@
                 <div id="menu">
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/news.php">News</a></li>
-                        <li><a href="/hunters.php">Hunters</a></li>
-                        <li><a href="/upload.php">Upload</a></li>
-                        <li><a href="/about.php">About</a></li>
-                        <li><a href="/contact.php">Contact</a></li>
+                        <li><a href="/news">News</a></li>
+                        <li><a href="/hunters">Hunters</a></li>
+                        <li><a href="/upload">Upload</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
                 <div id="auth">
-                    <a class="btn btn-primary" href="/admin/login.php">Login</a>
+                    @if (isset($_SESSION['user_id']))
+                        <div class="col-auto mb-3">
+                            <button class="btn btn-primary" type="submit"><a href="/views/logout/content.blade.php">Logout</a></button>
+                        </div>
+                    @else
+                        <div class="col-auto mb-3">
+                            <button class="btn btn-primary" type="submit"><a href="/admin/login.php">Login</a></button>
+                        </div>
+
+{{--                        <a class="btn btn-primary" href="/admin/logout.php">logout</a>
+                    @else
+                        <a class="btn btn-primary" href="/admin/login.php">Login</a>--}}
+                    @endif
                 </div>
             </div>
             <div class="alert"><p style="color:red">Graboid alert!!!</p></div>

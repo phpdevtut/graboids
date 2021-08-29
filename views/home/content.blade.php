@@ -16,7 +16,9 @@
         @foreach (array_chunk($graboids, 5) as $graboidsChunk)
             <div class="imgWrapper">
                 @foreach ($graboidsChunk as $graboid)
+                    <a href="/{{ $graboid['id'] }}">
                     <img class="img-thumbnail rounded float-start" src="{{ $graboid['src'] }}" />
+                    </a>
                 @endforeach
             </div>
         @endforeach

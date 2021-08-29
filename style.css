@@ -2,8 +2,9 @@
     margin: 0 auto;
 }
 body {
-    background: url("/assets/images/background.jpg");
-    background-repeat: repeat;
+    background-image: url("/assets/images/grabbg.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #header {
     height: 250px;
@@ -77,10 +78,12 @@ h2, h4, h5 {
 }
 
 #content {
-    border: 1px solid #ddd;
+    border: 1px solid black;
     padding: 10px;
     margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 
 .clear {
     clear: both;
@@ -118,6 +121,10 @@ h2, h4, h5 {
     background-color: purple;
     color: white;
     border-color: purple;
+}
+
+.btn-primary a {
+    color: black;
 }
 
 /*.upload_div {
@@ -188,3 +195,28 @@ h2, h4, h5 {
 .list-group-item a {
     background-color: pink;
 }
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    width: 200px;
+    overflow: hidden;
+}
+
+.big-card {
+    margin: auto;
+}
+
+/*.card-body {
+    clear: left;
+}*/
+
+/*
+.big-card-title {
+    text-align: right;
+}
+
+.big-card-text {
+    text-align: right;
+}*/

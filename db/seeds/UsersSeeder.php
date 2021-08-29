@@ -17,9 +17,9 @@ class UsersSeeder extends AbstractSeed
     {
         $users = [
             [
-                'user_id' => 123,
                 'username' => 'braden',
                 'password' => 'secret',
+                'admin'=> '1',
             ],
         ];
 
