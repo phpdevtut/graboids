@@ -3,10 +3,9 @@
 @section('content')
     <div class="outer_form_div">
         <p>{{ $message }}</p>
-        <p>{{ print_r($params) }}</p>
         <h4>Login</h4>
         <div class="inner_form">
-            <form action="/admin/login.php" method="POST">
+            <form action="/login" method="POST">
                 <div class="col-auto mb-3">
                     <p>Username:</p>
                     <input class="form-control" name="username">

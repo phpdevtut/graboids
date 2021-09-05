@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Graboids\Controllers;
 
 use Graboids\Models\Graboid;
+use Graboids\Models\User;
 use Jenssegers\Blade\Blade;
 
 class HomeController
@@ -12,10 +13,13 @@ class HomeController
     public function index() {
         $blade = new Blade('views', 'cache');
 
+        $this->user = User::find($_SESSION['user_id']);
+
         $graboids = Graboid::all();
 
         $html = $blade->render('home.content', [
             'graboids' => $graboids,
+            'user' => $this->user,
         ]);
 
         echo $html;

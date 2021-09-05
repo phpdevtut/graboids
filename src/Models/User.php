@@ -7,9 +7,9 @@ namespace Graboids\Models;
 use Graboids\Services\Database;
 use PDO;
 
-class User
+class User extends \Illuminate\Database\Eloquent\Model
 {
-    public static function findById (int $id)
+    public static function findById(int $id)
     {
         $db = new Database();
     }

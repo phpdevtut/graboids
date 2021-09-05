@@ -48,6 +48,11 @@
                 </div>
             </div>
             <div class="alert"><p style="color:red">Graboid alert!!!</p></div>
+            @if (!empty($user))
+                <div class="alert">
+                    <p>Hello, {{ $user->username }}</p>
+                </div>
+            @endif
             <div id="content">
             {{--            content.blade.php searches for this, and replaces it with divs inside file.--}}
 

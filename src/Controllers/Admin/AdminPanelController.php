@@ -17,10 +17,11 @@ class AdminPanelController
         // - if yes, we can check if there is a valid(existing) session id in the cookie
         // - if no, we will redirect the user to login page
         if (empty($_COOKIE)) {
-            header('Location: /admin/login.php');
+            header('Location: /login');
         }
 
         if (!$_SESSION['is_admin']) {
+            $_SESSION['message'] = 'Not an admin!';
             header('Location: /');
         }
 

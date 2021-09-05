@@ -6,14 +6,18 @@ namespace Graboids\Models;
 
 use Graboids\Services\Database;
 
-class Hunter extends Model
+class Hunter extends \Illuminate\Database\Eloquent\Model
 {
     public const TABLE = 'hunters';
 
-/*    public static function all() {
-        $db = new Database();
-        return $db->query('SELECT * FROM hunters;')->fetchAll();
-    }*/
+    /**
+     * @var string[]
+     */
+    protected $fillable = [
+        'src',
+        'name',
+        'description',
+    ];
 
     //Pass in text from POST, Title and Content as an array, 1 box holding title text, 1 box holding content text?
     public static function create(array $params) {
