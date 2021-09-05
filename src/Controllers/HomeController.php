@@ -32,4 +32,11 @@ class HomeController
 
         echo $html;
     }
+
+    public function delete(int $graboidId)
+    {
+        Graboid::deleteById($graboidId);
+
+        header('Location: /');
+    }
 }

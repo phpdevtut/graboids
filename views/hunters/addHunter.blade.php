@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-auto mb-3">
                     <p>Hunter Description</p>
-                    <textarea  class="message_form" name="desc"></textarea>
+                    <textarea  class="message_form" name="description"></textarea>
                 </div>
                 <div class="col-auto mb-3">
                     <button class="btn btn-primary" type="submit">Submit</button>

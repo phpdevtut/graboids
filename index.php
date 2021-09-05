@@ -18,16 +18,17 @@ $router = new \Bramus\Router\Router();
 // Define routes
 $router->get('/', '\Graboids\Controllers\HomeController@index');
 $router->get('/(\d+)', '\Graboids\Controllers\HomeController@show');
-//is it taking the digit from content and passing it to show function? or where is the digit coming from?
+$router->get('/graboid/(\d+)/delete', '\Graboids\Controllers\HomeController@delete');
 $router->get('/news', '\Graboids\Controllers\NewsController@index');
 $router->get('/upload', '\Graboids\Controllers\UploadController@index');
 $router->get('/about', '\Graboids\Controllers\AboutController@index');
 $router->get('/contact', '\Graboids\Controllers\ContactController@index');
-
 $router->get('logout', '\Graboids\Controllers\LogoutController@logout');
 
 // Admin
+$router->get('admin/admin-panel', '\Graboids\Controllers\Admin\AdminPanelController@index');
 $router->get('admin/add-article', '\Graboids\Controllers\Admin\ArticlesController@add');
+$router->get('admin/add-hunter', '\Graboids\Controllers\Admin\HuntersController@add');
 
 // Hunters
 $router->get('/hunters', '\Graboids\Controllers\HuntersController@index');

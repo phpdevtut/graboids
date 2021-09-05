@@ -2,9 +2,7 @@
     margin: 0 auto;
 }
 body {
-    background-image: url("/assets/images/grabbg.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("/assets/images/background.jpg");
 }
 #header {
     height: 250px;
@@ -36,8 +34,21 @@ body {
     margin: 20px;
 }
 
+#menubuttons {
+    display: inline;
+    float: left;
+}
+
+#menubuttons li {
+    display: inline;
+    float: left;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+
 a:link {
-    color: green;
+    color: purple;
     background-color: transparent;
     text-decoration: none;
 }
@@ -220,3 +231,14 @@ h2, h4, h5 {
 .big-card-text {
     text-align: right;
 }*/
+
+.btn.btn-danger {
+    background-color: red;
+    color: black;
+}
+
+.btn.btn-danger:hover{
+    background-color: darkred;
+    color: black;
+    border-color: darkred;
+}

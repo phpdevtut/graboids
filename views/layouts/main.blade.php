@@ -9,7 +9,7 @@
     <body>
         <div id="wrapper" class="container">
             <div id="header">
-                <img id="logo" src="/assets/images/Tremors_Logo_Sm.png"/>
+                <a href="/"><img id="logo" src="/assets/images/Tremors_Logo_Sm.png"/></a>
                 <div id="menu">
                     <ul>
                         <li><a href="/">Home</a></li>
@@ -22,8 +22,19 @@
                 </div>
                 <div id="auth">
                     @if (isset($_SESSION['user_id']))
+                        <div id="menubuttons">
+                        <ul>
+                            <li>
+                                <div class="col-auto mb-3">
+                                    <button class="btn btn-primary" type="submit"><a href="/admin/admin-panel">admin</a></button>
+                                </div>
+                            </li>
+                            <li>
                         <div class="col-auto mb-3">
                             <button class="btn btn-primary" type="submit"><a href="/logout">Logout</a></button>
+                        </div>
+                            </li>
+                        </ul>
                         </div>
                     @else
                         <div class="col-auto mb-3">

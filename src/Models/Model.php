@@ -10,6 +10,11 @@ abstract class Model
 {
     public const TABLE = '';
 
+    public static function all() {
+        $db = new Database();
+        return $db->query("SELECT * FROM `" . static::TABLE . "`;")->fetchAll();
+    }
+
     public static function getById(int $id) {
         $db = new Database();
 
