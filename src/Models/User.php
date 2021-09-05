@@ -9,11 +9,6 @@ use PDO;
 
 class User extends \Illuminate\Database\Eloquent\Model
 {
-    public static function findById(int $id)
-    {
-        $db = new Database();
-    }
-
     public static function findByUsernameAndPassword(string $username, string $password)
     {
         $db = new Database();

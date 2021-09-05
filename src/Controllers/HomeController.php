@@ -28,7 +28,7 @@ class HomeController
     public function show(int $graboidId) {
         $blade = new Blade('views', 'cache');
 
-        $graboid = Graboid::getById($graboidId);
+        $graboid = Graboid::with('comments')->find($graboidId);
 
         $html = $blade->render('home.show', [
             'graboid' => $graboid,

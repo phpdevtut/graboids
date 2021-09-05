@@ -14,7 +14,12 @@
             <h5 class="big-card-title">test</h5>
             <p class="big-card-text">test</p>
         </div>
-
+        <hr>
+        <div class="comments">
+            <p>Number of comments: {{ $graboid->comments()->count() }}</p>
+            @foreach($graboid->comments as $comment)
+                <p>{{ $comment->comment }}</p>
+            @endforeach
+        </div>
     </div>
-
 @endsection

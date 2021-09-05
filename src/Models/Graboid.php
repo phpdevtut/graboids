@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 namespace Graboids\Models;
 
-use Graboids\Services\Database;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
-class Graboid extends Model
+class Graboid extends \Illuminate\Database\Eloquent\Model
 {
-    public const TABLE = 'graboids';
-
-/*    public static function all() {
-        $db = new Database();
-        return $db->query('SELECT * FROM graboids')->fetchAll();
-    }*/
+    public function comments(): MorphMany
+    {
+        return $this->morphMany(
+            Comment::class,
+            'commentable'
+        );
+    }
 }
