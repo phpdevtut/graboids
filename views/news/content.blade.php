@@ -6,8 +6,10 @@
         <div class="inner_form">
 
         @foreach ($news as $new)
+            <div class= "article">
             <p>{{ $new['title'] }}</p>
             <p>{{ $new['content'] }}</p>
+            </div>
         @endforeach
         </div>
     </div>

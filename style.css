@@ -242,3 +242,10 @@ h2, h4, h5 {
     color: black;
     border-color: darkred;
 }
+
+.article {
+    height: 100px;
+    width: 300px;
+    background-color: purple;opacity:0.8;
+    margin-bottom: 5px;
+}

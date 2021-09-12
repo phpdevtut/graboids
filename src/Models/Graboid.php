@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Graboid extends \Illuminate\Database\Eloquent\Model
 {
+    protected $fillable = [
+        'src',
+    ];
+
     public function comments(): MorphMany
     {
         return $this->morphMany(
@@ -15,4 +19,6 @@ class Graboid extends \Illuminate\Database\Eloquent\Model
             'commentable'
         );
     }
+
+
 }

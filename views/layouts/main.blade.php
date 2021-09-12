@@ -26,7 +26,7 @@
                         <ul>
                             <li>
                                 <div class="col-auto mb-3">
-                                    <button class="btn btn-primary" type="submit"><a href="/admin/admin-panel">admin</a></button>
+                                    <button class="btn btn-primary" type="submit"><a href="/admin">admin</a></button>
                                 </div>
                             </li>
                             <li>
@@ -38,7 +38,7 @@
                         </div>
                     @else
                         <div class="col-auto mb-3">
-                            <button class="btn btn-primary" type="submit"><a href="/admin/login.php">Login</a></button>
+                            <button class="btn btn-primary" type="submit"><a href="/login">Login</a></button>
                         </div>
 
 {{--                        <a class="btn btn-primary" href="/admin/logout.php">logout</a>

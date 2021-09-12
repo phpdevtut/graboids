@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 namespace Graboids\Controllers\Admin;
-use Graboids\Models\News;
 
+use Graboids\Models\Graboid;
 use Jenssegers\Blade\Blade;
 
-class ArticlesController
+class HomeController
 {
     /**
      * @var Blade
@@ -21,38 +21,37 @@ class ArticlesController
 
     public function index()
     {
-        $news = News::all();
+        $graboids = Graboid::all();
 
-        echo $this->blade->render('admin.news', [
-            'news' => $news,
+        echo $this->blade->render('admin.graboids', [
+            'graboids' => $graboids,
         ]);
     }
 
-    public function edit(int $newsId)
+    public function edit(int $graboidId)
     {
-        $new = News::find($newsId);
+        $graboid = Graboid::find($graboidId);
 
-        echo $this->blade->render('admin.news.edit', [
-            'new' => $new,
+        echo $this->blade->render('admin.graboids.edit', [
+            'graboid' => $graboid,
         ]);
 
-        echo $newsId;
+        echo $graboidId;
     }
 
-    public function update(int $newsId)
+    public function update(int $graboidId)
     {
         $requestData = [
-            'title' => $_POST['title'],
-            'content' => $_POST['content'],
+            'src' => $_POST['src'],
         ];
 
-        $new = News::find($newsId);
-        $new->update($requestData);
+        $graboid = Graboid::find($graboidId);
+        $graboid->update($requestData);
 
-        header('Location: /admin/news');
+        header('Location: /admin/graboids');
     }
 
-    public function add()
+/*    public function add()
     {
         $blade = new Blade('views', 'cache');
 
@@ -64,12 +63,17 @@ class ArticlesController
             header('Location: /admin/login.php');
         }
 
-        if (!$_SESSION['is_admin']) {
+        if (empty($_SESSION['is_admin'])) {
             header('Location: /');
         }
 
-        $html = $blade->render('news.addArticle');
+        $html = $blade->render('hunters.addHunter');
 
         echo $html;
+    }*/
+
+    public function create()
+    {
+
     }
 }

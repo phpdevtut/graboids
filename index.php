@@ -67,6 +67,15 @@ $router->get('/admin/hunters', '\Graboids\Controllers\Admin\HuntersController@in
 $router->get('/admin/hunters/(\d+)/edit', '\Graboids\Controllers\Admin\HuntersController@edit');
 $router->post('/admin/hunters/(\d+)', '\Graboids\Controllers\Admin\HuntersController@update');
 
+$router->get('/admin/graboids', '\Graboids\Controllers\Admin\HomeController@index');
+$router->get('/admin/graboids/(\d+)/edit', '\Graboids\Controllers\Admin\HomeController@edit');
+$router->post('/admin/graboids/(\d+)', '\Graboids\Controllers\Admin\HomeController@update');
+
+$router->get('/admin/news', '\Graboids\Controllers\Admin\ArticlesController@index');
+$router->get('/admin/news/(\d+)/edit', '\Graboids\Controllers\Admin\ArticlesController@edit');
+$router->post('/admin/news/(\d+)', '\Graboids\Controllers\Admin\ArticlesController@update');
+
+
 // Login
 $router->get('/login', '\Graboids\Controllers\LoginController@showForm');
 $router->post('/login', '\Graboids\Controllers\LoginController@login');

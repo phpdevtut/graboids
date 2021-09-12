@@ -2,24 +2,21 @@
 
 @section('content')
     <div class="outer_form_div">
-        <h4>Edit a Hunter</h4>
+        <h4>Edit an Article</h4>
         <div class="inner_form">
-            <form action="/admin/hunters/{{ $hunter->id }}" method="POST">
-                <div>
-                    <img src="{{ $hunter->src }}" />
+            <form action="/admin/news/{{ $new->id }}" method="POST">
+                <div class="col-auto mb-3">
+                    <p>ID</p>
+                    <input class="form-control" name="src" value="{{ $new->id }}">
                 </div>
                 <div class="col-auto mb-3">
-                    <p>src</p>
-                    <input class="form-control" name="src" value="{{ $hunter->src }}">
+                    <p>title</p>
+                    <input class="form-control" name="name" value="{{ $new->title }}">
                 </div>
                 <div class="col-auto mb-3">
-                    <p>Hunter Name</p>
-                    <input class="form-control" name="name" value="{{ $hunter->name }}">
-                </div>
-                <div class="col-auto mb-3">
-                    <p>Hunter Description</p>
+                    <p>content</p>
                     <textarea  class="message_form" name="description">
-                        {{ $hunter->description }}
+                        {{ $new->content }}
                     </textarea>
                 </div>
                 <div class="col-auto mb-3">
