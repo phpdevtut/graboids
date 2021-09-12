@@ -23,9 +23,11 @@ class HuntersController
 
     public function show(int $hunterId) {
         $blade = new Blade('views', 'cache');
-// gives back single hunter database object?
-        $hunter = Hunter::getById($hunterId);
-//sends database object to "show"?
+
+        // gives back single hunter database object?
+        $hunter = Hunter::find($hunterId);
+
+        //sends database object to "show"?
         $html = $blade->render('hunters.show', [
             'hunter' => $hunter,
         ]);
