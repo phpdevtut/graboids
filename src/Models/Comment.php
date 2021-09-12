@@ -14,6 +14,15 @@ class Comment extends \Illuminate\Database\Eloquent\Model
 
     public $timestamps = false;
 
+    public function comments()
+    {
+        return $this->hasMany(
+            Comment::class,
+            'parent_id',
+            'id'
+        );
+    }
+
     /**
      * @return mixed
      */
