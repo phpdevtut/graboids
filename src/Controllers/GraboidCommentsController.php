@@ -9,15 +9,13 @@ use Graboids\Models\Graboid;
 
 class GraboidCommentsController
 {
-    public function __construct()
+    public function store(int $graboidId)
     {
         if (empty($_SESSION['user_id'])) {
             header('Location: /login');
+            return;
         }
-    }
 
-    public function store(int $graboidId)
-    {
         $commentText = $_POST['comment'];
 
         $graboid = Graboid::find($graboidId);
