@@ -15,6 +15,15 @@
             <p class="big-card-text">test</p>
         </div>
         <hr>
+        <div>
+            <form action="/graboids/{{ $graboid->id }}/comments" method="POST">
+                <textarea class="form-control" name="comment">
+
+                </textarea>
+                <button class="btn btn-primary" type="submit">Post</button>
+            </form>
+        </div>
+        <hr>
         <div class="comments">
             <p>Number of comments: {{ $graboid->comments()->count() }}</p>
             @foreach($graboid->comments as $comment)

@@ -29,7 +29,9 @@ class LoginController
         // here we have to take the data from the $_POST and try to find out
         // if we have a corresponding user in users table
         // if we find one, that means that user that sent request is indeed the guy
-        $user = User::findByUsernameAndPassword($_POST['username'], $_POST['password']);
+        $user = User::where('username', $_POST['username'])
+            ->where('password', $_POST['password'])
+            ->first();
 
         if ($user) {
             $_SESSION['is_admin'] = $user->admin;

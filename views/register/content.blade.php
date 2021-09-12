@@ -3,15 +3,25 @@
 @section('content')
     <div class="outer_form_div">
         <h2>Register Here</h2>
+        @if (!empty($_SESSION['message']))
+            <div class="alert alert-warning" role="alert">
+                {{ getFlash() }}
+            </div>
+        @endif
+
         <div class="inner_form">
-            <form action="/admin/registerNewUser.php" method="POST">
-                <p>Username:</p>
+            <form action="/register" method="POST">
+                <p>Email:</p>
                 <div name="title" class="col-auto mb-3">
-                    <input class="form-control" name="username">
+                    <input class="form-control" name="email">
                 </div>
                 <p>Password:</p>
                 <div class="col-auto mb-3">
-                    <input  class="form-control" name="password"></input>
+                    <input class="form-control" name="password" type="password" />
+                </div>
+                <p>Password confirmation:</p>
+                <div class="col-auto mb-3">
+                    <input class="form-control" name="password_confirmation" type="password" />
                 </div>
                 <div class="col-auto mb-3">
                     <button class="btn btn-primary" type="submit">Submit</button>

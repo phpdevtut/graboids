@@ -19,6 +19,4 @@ class Graboid extends \Illuminate\Database\Eloquent\Model
             'commentable'
         );
     }
-
-
 }

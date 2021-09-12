@@ -20,7 +20,7 @@ class AdminPanelController
             header('Location: /login');
         }
 
-        if (!$_SESSION['is_admin']) {
+        if (empty($_SESSION['is_admin'])) {
             $_SESSION['message'] = 'Not an admin!';
             header('Location: /');
         }

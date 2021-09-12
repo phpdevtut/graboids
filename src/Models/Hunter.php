@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Graboids\Models;
 
 use Graboids\Services\Database;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Hunter extends \Illuminate\Database\Eloquent\Model
 {
@@ -27,5 +28,13 @@ class Hunter extends \Illuminate\Database\Eloquent\Model
 
         $db = new Database();
         return $db->query("INSERT INTO hunters (src, name, description) VALUES ('{$src}', '{$name}', '{$description}')");
+    }
+
+    public function comments(): MorphMany
+    {
+        return $this->morphMany(
+            Comment::class,
+            'commentable'
+        );
     }
 }

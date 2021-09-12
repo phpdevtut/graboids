@@ -18,7 +18,7 @@
                     <button class="btn btn-primary" type="submit">Login</button>
                 </div>
                 <div>
-                    <a href="/./register.php">Register a New Account</a>
+                    <a href="/register">Register a New Account</a>
                 </div>
             </form>
         </div>

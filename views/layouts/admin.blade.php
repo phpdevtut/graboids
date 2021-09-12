@@ -37,25 +37,30 @@
                             <button class="btn btn-primary" type="submit"><a href="/login">Login</a></button>
                         </div>
 
-{{--                        <a class="btn btn-primary" href="/admin/logout.php">logout</a>
-                    @else
-                        <a class="btn btn-primary" href="/admin/login.php">Login</a>--}}
+                        {{--                        <a class="btn btn-primary" href="/admin/logout.php">logout</a>
+                                            @else
+                                                <a class="btn btn-primary" href="/admin/login.php">Login</a>--}}
                     @endif
                 </div>
             </div>
-            <div class="alert"><p style="color:red">Graboid alert!!!</p></div>
-            @if (!empty($user))
-                <div class="alert">
-                    <p>Hello, {{ $user->username }}</p>
-                </div>
-            @endif
-            <div id="content">
-            {{--            content.blade.php searches for this, and replaces it with divs inside file.--}}
 
-            <!--
-                 Here we had %content% as a pointer on where we want to embed a view
-                 -->
-                @yield('content')
+            <div class="row">
+                <div class="col-3">
+                    <div class="adminPanelList">
+                        <div class="list-group">
+                            <a href="/admin/hunters" class="list-group-item list-group-item-action">Hunters</a>
+                            <a href="/admin/add-article" class="list-group-item list-group-item-action" aria-current="true">
+                                Add An Article</a>
+                            <a href="/admin/add-hunter" class="list-group-item list-group-item-action">Add Hunter</a>
+                            <a href="#" class="list-group-item list-group-item-action">Edit Hunters</a>
+                            <a href="#" class="list-group-item list-group-item-action">Edit Users</a>
+                            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Edit Comments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    @yield('content')
+                </div>
             </div>
         </div>
     </body>

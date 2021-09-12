@@ -14,7 +14,13 @@
             <h5 class="big-card-title">{{ $hunter->name }}</h5>
             <p class="big-card-text">{{ $hunter->description }}</p>
         </div>
-
+        <hr>
+        <div class="comments">
+            <p>Number of comments: {{ $hunter->comments()->count() }}</p>
+            @foreach($hunter->comments as $comment)
+                <p>{{ $comment->comment }}</p>
+            @endforeach
+        </div>
     </div>
 
 @endsection

@@ -3,21 +3,17 @@
 @extends('layouts.main')
 
 @section('content')
- {{--       @foreach (array_chunk($graboids->all(), 4) as $graboidsRow)
-            <div class="row">
-                @foreach ($graboidsRow as $graboid)
-                    <div class="image">
-                        <img src="{{ $graboid['src'] }}" />
-                    </div>
-                @endforeach
-            </div>
-        @endforeach--}}
+    @if (!empty($_SESSION['message']))
+        <div class="alert alert-warning" role="alert">
+            {{ getFlash() }}
+        </div>
+    @endif
     <div class="myGallery">
         @foreach ($graboids->chunk(5) as $graboidsChunk)
             <div class="imgWrapper">
                 @foreach ($graboidsChunk as $graboid)
                     <a href="/{{ $graboid->id }}">
-                    <img class="img-thumbnail rounded float-start" src="{{ $graboid->src }}" />
+                        <img class="img-thumbnail rounded float-start" src="{{ $graboid->src }}" />
                     </a>
                 @endforeach
             </div>

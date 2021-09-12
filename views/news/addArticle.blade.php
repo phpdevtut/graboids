@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 
 @section('content')
 <div class="outer_form_div">
@@ -11,7 +11,7 @@
                 </div>
             <p>Content:</p>
                 <div class="col-auto mb-3">
-                    <textarea  class="message_form" name="content"></textarea>
+                    <textarea class="message_form form-control"  name="content"></textarea>
                 </div>
             <div class="col-auto mb-3">
                 <button class="btn btn-primary" type="submit">Submit</button>

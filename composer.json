@@ -7,6 +7,7 @@
         "illuminate/database": "^8.58"
     },
     "autoload": {
-        "psr-4": {"Graboids\\": "src/"}
+        "psr-4": {"Graboids\\": "src/"},
+        "files": ["src/helpers.php"]
     }
 }

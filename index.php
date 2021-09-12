@@ -47,8 +47,17 @@ $capsule->bootEloquent();
 
 //////////////////////////////////////////////////////////////////////////
 
+$router->before('GET|POST', '/admin/.*', function() {
+    if (
+        empty($_SESSION['user_id']) &&
+        empty($_SESSION['is_admin'])
+    ) {
+        header('location: /login');
+        exit();
+    }
+});
 
-// Define routes
+// Graboids
 $router->get('/', '\Graboids\Controllers\HomeController@index');
 $router->get('/(\d+)', '\Graboids\Controllers\HomeController@show');
 $router->get('/graboid/(\d+)/delete', '\Graboids\Controllers\HomeController@delete');
@@ -57,6 +66,9 @@ $router->get('/upload', '\Graboids\Controllers\UploadController@index');
 $router->get('/about', '\Graboids\Controllers\AboutController@index');
 $router->get('/contact', '\Graboids\Controllers\ContactController@index');
 $router->get('/logout', '\Graboids\Controllers\LogoutController@logout');
+
+// Comments
+$router->post('/graboids/(\d+)/comments', '\Graboids\Controllers\GraboidCommentsController@store');
 
 // Admin
 $router->get('/admin', '\Graboids\Controllers\Admin\AdminPanelController@index');
@@ -79,6 +91,12 @@ $router->post('/admin/news/(\d+)', '\Graboids\Controllers\Admin\ArticlesControll
 // Login
 $router->get('/login', '\Graboids\Controllers\LoginController@showForm');
 $router->post('/login', '\Graboids\Controllers\LoginController@login');
+
+// Register
+$router->get('/register', '\Graboids\Controllers\RegisterController@showForm');
+$router->get('/register/confirm/(\w+)', '\Graboids\Controllers\RegisterController@confirm');
+$router->post('/register', '\Graboids\Controllers\RegisterController@register');
+
 
 // Hunters
 $router->get('/hunters', '\Graboids\Controllers\HuntersController@index');

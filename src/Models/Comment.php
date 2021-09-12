@@ -8,6 +8,8 @@ class Comment extends \Illuminate\Database\Eloquent\Model
 {
     protected $fillable = [
         'comment',
+        'commentable_id',
+        'commentable_type',
     ];
 
     public $timestamps = false;
