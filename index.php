@@ -87,6 +87,8 @@ $router->get('/admin/news', '\Graboids\Controllers\Admin\ArticlesController@inde
 $router->get('/admin/news/(\d+)/edit', '\Graboids\Controllers\Admin\ArticlesController@edit');
 $router->post('/admin/news/(\d+)', '\Graboids\Controllers\Admin\ArticlesController@update');
 
+$router->get('/admin/users', '\Graboids\Controllers\Admin\UsersController@index');
+$router->get('/admin/users/(\d+)/edit', '\Graboids\Controllers\Admin\UsersController@edit');
 
 // Login
 $router->get('/login', '\Graboids\Controllers\LoginController@showForm');

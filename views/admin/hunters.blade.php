@@ -4,7 +4,8 @@
     <div class="container">
         <div class="row">
             <div>
-                <h1><Hunters></Hunters></h1>
+                <h3 class="adminhuntersheader">Hunters</h3>
+                <a class="addhunter" href="/admin/add-hunter">Add Hunter</a>
                 <table class="table table-dark table-striped">
                     <thead>
                         <tr>
